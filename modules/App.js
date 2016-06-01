@@ -40,7 +40,7 @@ export default React.createClass({
           {this.props.shirts.map(function(resp, i){
             return <div key={i} className="col-md-4">
               <div className="view__wrapper">
-                <div id={"imageSwap"} className="carousel" data-ride="carousel" data-interval="false">
+                <div id={resp.id} className="carousel" data-ride="carousel" data-interval="false">
                   <div className="carousel-inner">
                     <div className="item active">
                     <img className="shirt__image" src={resp.imageUrlFront}/>
@@ -50,13 +50,13 @@ export default React.createClass({
                     </div>
                   </div>
 
-                  <a className="carousel-swap" href="#imageSwap" role="button" data-slide="prev">
+                  <a className="carousel-swap" href={`#${resp.id}`} role="button" data-slide="prev">
                     <span className="flip glyphicon glyphicon-share"></span>
                   </a>
                 </div>
                 <div className="btn-group bar">
                   <div>
-                    <button className="btn btn-default bar__el"><span className="glyphicon glyphicon-retweet icon carousel-swap" href="#imageSwap" data-slide="prev"></span></button>
+                    <button className="btn btn-default bar__el"><span className="glyphicon glyphicon-retweet icon carousel-swap" href={`#${resp.id}`} data-slide="prev"></span></button>
                     <button className="btn btn-default bar__el"><span className="glyphicon glyphicon-heart-empty icon"></span></button>
                     <div className="dropup dropup__button">
                     <button className="btn btn-default bar__el" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span className="glyphicon icon">XL</span></button>
