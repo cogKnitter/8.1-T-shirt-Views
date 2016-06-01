@@ -5890,7 +5890,10 @@ html {
   width: 20%;
   margin: 0;
   border-radius: 0;
-  border: 2px solid #16a085; }
+  border-right: 2px solid #16a085; }
+
+.bar__el:nth-child(5) {
+  border-right: 0; }
 
 .shirt__image {
   width: 100%; }
@@ -5906,11 +5909,19 @@ html {
 
 .dropup__wrapper {
   box-sizing: border-box;
-  width: 4rem;
   padding: 0.5rem; }
 
 .dropup__button {
   display: inline; }
+
+.dropdown-menu {
+  min-width: 11rem; }
+
+.size__li {
+  color: #16a085;
+  font-size: 2rem;
+  display: block;
+  text-align: center; }
 
 .square__wrapper {
   padding: 0.8rem;
@@ -5945,8 +5956,8 @@ html {
 
 .item__price {
   display: inline-block;
-  width: 50%;
-  text-align: center;
+  width: 45%;
+  text-align: right;
   color: #16a085; }
 
 /*# sourceMappingURL=main.css.map */

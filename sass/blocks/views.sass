@@ -13,7 +13,10 @@
   width: 20%
   margin: 0
   border-radius: 0
-  border: $borderDefault
+  border-right: $borderDefault
+
+.bar__el:nth-child(5)
+  border-right: 0
 
 .shirt__image
   width: 100%
@@ -29,11 +32,19 @@
 
 .dropup__wrapper
   box-sizing: border-box
-  width: 4rem
   padding: .5rem
 
 .dropup__button
   display: inline
+
+.dropdown-menu
+  min-width: 11rem
+
+.size__li
+  color: $fontColor
+  font-size: 2rem
+  display: block
+  text-align: center
 
 .square__wrapper
   padding: .8rem
@@ -68,6 +79,6 @@
 
 .item__price
   display: inline-block
-  width: 50%
-  text-align: center
+  width: 45%
+  text-align: right
   color: $fontColor

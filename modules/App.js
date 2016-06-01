@@ -61,15 +61,15 @@ export default React.createClass({
                     <div className="dropup dropup__button">
                     <button className="btn btn-default bar__el" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span className="glyphicon icon">XL</span></button>
                     <ul className="dropdown-menu">
-                      <li>XS</li>
-                      <li>S</li>
-                      <li>M</li>
-                      <li>L</li>
+                      <li className="size__li">XS</li>
+                      <li className="size__li">S</li>
+                      <li className="size__li">M</li>
+                      <li className="size__li">L</li>
                     </ul>
                     </div>
                     <div className="dropup dropup__button">
                     <button className="btn btn-default bar__el dropdown-toggle square__wrapper" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div className="color__square"></div></button>
-                    <ul className="dropup__wrapper dropdown-menu">
+                    <ul className="dropdown-menu dropup__wrapper">
                       <li className="square__wrapper"><div className="color__square color__square--1"></div></li>
                       <li className="square__wrapper"><div className="color__square color__square--2"></div></li>
                       <li className="square__wrapper"><div className="color__square color__square--3"></div></li>
