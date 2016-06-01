@@ -39,8 +39,8 @@ export default React.createClass({
         <div className="row">
           {this.props.shirts.map(function(resp, i){
             return <div key={i} className="col-md-4">
-              <div className="">
-                <div id="imageSwap" className="carousel" data-ride="carousel" data-interval="false">
+              <div className="view__wrapper">
+                <div id={"imageSwap"} className="carousel" data-ride="carousel" data-interval="false">
                   <div className="carousel-inner">
                     <div className="item active">
                     <img className="shirt__image" src={resp.imageUrlFront}/>
@@ -54,35 +54,34 @@ export default React.createClass({
                     <span className="flip glyphicon glyphicon-share"></span>
                   </a>
                 </div>
-                <nav className="navbar navbar-default">
-                  <div className="btn-group">
-                    <div>
-                      <button className="btn btn-default navbar-btn"><span className="glyphicon glyphicon-retweet icon carousel-swap" href="#imageSwap" data-slide="prev"></span></button>
-                      <button className="btn btn-default"><span className="glyphicon glyphicon-heart-empty icon"></span></button>
-                      <div className="dropup dropup__button">
-                      <button className="btn btn-default navbar-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span className="glyphicon icon">XL</span></button>
-                      <ul className="dropdown-menu">
-                        <li>XS</li>
-                        <li>S</li>
-                        <li>M</li>
-                        <li>L</li>
-                      </ul>
-                      </div>
-                      <div className="dropup dropup__button">
-                      <button className="btn btn-default navbar-btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div className="color__square"></div></button>
-                      <ul className="dropup__wrapper dropdown-menu">
-                        <li className="square__wrapper"><div className="color__square"></div></li>
-                        <li className="square__wrapper"><div className="color__square"></div></li>
-                        <li className="square__wrapper"><div className="color__square"></div></li>
-                        <li className="square__wrapper"><div className="color__square"></div></li>
-                      </ul>
-                      </div>
-                      <button className="btn btn-default navbar-btn"><span className="glyphicon glyphicon-shopping-cart icon"></span></button>
+                <div className="btn-group bar">
+                  <div>
+                    <button className="btn btn-default bar__el"><span className="glyphicon glyphicon-retweet icon carousel-swap" href="#imageSwap" data-slide="prev"></span></button>
+                    <button className="btn btn-default bar__el"><span className="glyphicon glyphicon-heart-empty icon"></span></button>
+                    <div className="dropup dropup__button">
+                    <button className="btn btn-default bar__el" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span className="glyphicon icon">XL</span></button>
+                    <ul className="dropdown-menu">
+                      <li>XS</li>
+                      <li>S</li>
+                      <li>M</li>
+                      <li>L</li>
+                    </ul>
                     </div>
+                    <div className="dropup dropup__button">
+                    <button className="btn btn-default bar__el dropdown-toggle square__wrapper" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div className="color__square"></div></button>
+                    <ul className="dropup__wrapper dropdown-menu">
+                      <li className="square__wrapper"><div className="color__square color__square--1"></div></li>
+                      <li className="square__wrapper"><div className="color__square color__square--2"></div></li>
+                      <li className="square__wrapper"><div className="color__square color__square--3"></div></li>
+                      <li className="square__wrapper"><div className="color__square"></div></li>
+                    </ul>
+                    </div>
+                    <button className="btn btn-default bar__el"><span className="glyphicon glyphicon-shopping-cart icon"></span></button>
                   </div>
-                </nav>
-                <h4>{resp.title}</h4>
-                <h4>${resp.price}</h4>
+                </div>
+
+                <h4 className="item__title">{resp.title}</h4>
+                <h4 className="item__price">${resp.price}</h4>
 
               </div>
             </div>

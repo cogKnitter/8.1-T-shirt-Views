@@ -5879,6 +5879,19 @@ html {
   width: 80%;
   margin: 0 auto; }
 
+.view__wrapper {
+  border: 2px solid #16a085; }
+
+.bar {
+  width: 100%;
+  border: 2px solid #16a085; }
+
+.bar__el {
+  width: 20%;
+  margin: 0;
+  border-radius: 0;
+  border: 2px solid #16a085; }
+
 .shirt__image {
   width: 100%; }
 
@@ -5887,7 +5900,9 @@ html {
   top: 0;
   right: 0;
   background-color: white;
-  padding: 1rem; }
+  padding: 1rem;
+  border: 2px solid #16a085;
+  color: #16a085; }
 
 .dropup__wrapper {
   box-sizing: border-box;
@@ -5898,18 +5913,40 @@ html {
   display: inline; }
 
 .square__wrapper {
-  margin: 1.5rem;
+  padding: 0.8rem;
+  padding-top: 0.9rem;
   display: inline-block; }
 
 .color__square {
   display: inline-block;
   height: 3rem;
   width: 3rem;
-  background-color: blue;
-  margin: 0.3rem; }
+  background-color: #2980b9; }
 
 .icon {
   font-size: 3rem;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  color: #16a085; }
+
+.color__square--1 {
+  background-color: #1abc9c; }
+
+.color__square--2 {
+  background-color: #9b59b6; }
+
+.color__square--3 {
+  background-color: #2ecc71; }
+
+.item__title {
+  display: inline-block;
+  width: 50%;
+  color: #16a085;
+  margin-left: 1rem; }
+
+.item__price {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  color: #16a085; }
 
 /*# sourceMappingURL=main.css.map */
