@@ -5908,14 +5908,19 @@ html {
   color: #16a085; }
 
 .dropup__wrapper {
-  box-sizing: border-box;
   padding: 0.5rem; }
+
+.dropup .dropdown-menu {
+  bottom: 200%; }
 
 .dropup__button {
   display: inline; }
 
 .dropdown-menu {
-  min-width: 11rem; }
+  min-width: 11rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem; }
 
 .size__li {
   color: #16a085;

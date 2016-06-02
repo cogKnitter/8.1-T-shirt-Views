@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Bootstrap from 'bootstrap-sass'
 
 export default React.createClass({
@@ -32,6 +33,18 @@ export default React.createClass({
       ]
     }
   },
+  getInitialState(){
+    return {
+     1: false,
+     2: false,
+     3: false
+    }
+  },
+  onHandleHeart(e){
+    var changeState = {};
+    changeState[ReactDOM.findDOMNode(e.target).dataset.id] = !this.state[ReactDOM.findDOMNode(e.target).dataset.id]
+    this.setState(changeState);
+  },
   render() {
     return (
       <section className="views-block">
@@ -57,9 +70,9 @@ export default React.createClass({
                 <div className="btn-group bar">
                   <div>
                     <button className="btn btn-default bar__el"><span className="glyphicon glyphicon-retweet icon carousel-swap" href={`#${resp.id}`} data-slide="prev"></span></button>
-                    <button className="btn btn-default bar__el"><span className="glyphicon glyphicon-heart-empty icon"></span></button>
+                    <button className="btn btn-default bar__el" onClick={this.onHandleHeart}><span data-id={resp.id} className={`icon glyphicon ${this.state[resp.id]? "glyphicon-heart" : "glyphicon-heart-empty"}`}></span></button>
                     <div className="dropup dropup__button">
-                    <button className="btn btn-default bar__el" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span className="glyphicon icon">XL</span></button>
+                    <button className="btn btn-default bar__el" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span className="glyphicon icon">XL</span></button>
                     <ul className="dropdown-menu">
                       <li className="size__li">XS</li>
                       <li className="size__li">S</li>
@@ -67,8 +80,8 @@ export default React.createClass({
                       <li className="size__li">L</li>
                     </ul>
                     </div>
-                    <div className="dropup dropup__button">
-                    <button className="btn btn-default bar__el dropdown-toggle square__wrapper" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div className="color__square"></div></button>
+                    <div className="dropup dropup__button test">
+                    <button className="btn btn-default bar__el dropdown-toggle square__wrapper" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div className="color__square"></div></button>
                     <ul className="dropdown-menu dropup__wrapper">
                       <li className="square__wrapper"><div className="color__square color__square--1"></div></li>
                       <li className="square__wrapper"><div className="color__square color__square--2"></div></li>
@@ -85,7 +98,7 @@ export default React.createClass({
 
               </div>
             </div>
-          })}
+          },this)}
         </div>
     </section>
     )
